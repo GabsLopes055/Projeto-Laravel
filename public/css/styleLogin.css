@@ -1,0 +1,24 @@
+.container {
+    margin-top: 90px;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form h3 {
+    margin-top: 20px;
+}
+
+form .form-control {
+    margin-top: 20px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+form [type="checkbox"] {
+    margin-top: 20px;
+}
