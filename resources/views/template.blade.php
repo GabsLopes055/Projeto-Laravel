@@ -9,7 +9,7 @@
 
     <link rel=" stylesheet" href="css/styleLogin.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Loja</title>
+    <title>@yield('titulo')</title>
 </head>
 
 <body>

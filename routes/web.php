@@ -13,4 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Login\LoginController@login')->name('login');
+Route::get('/', 'Login\LoginController@login')->name('login'); //quando acessar a home localhost:8000
+
+Route::get('/admin', 'Login\LoginController@dashboard')->name('admin'); // caso tente acessar o dashboard sem passar pelo login
+
+Route::get('/admin/logout', 'Login\LoginController@logout')->name('logout'); // rota para fazer o logout
+
+Route::post('/login/AutenticarUsuario', 'Login\LoginController@AutenticarUsuario')->name('AutenticarUsuario'); // rota que autentica o usuário
+
+
+Route::get('/admin/vendas', 'Dashboard\ControllerVendas@index')->name('vendas');

@@ -1,4 +1,6 @@
 @extends('template')
+@section('titulo', 'Lojas RA - Login')
+    
 
 @section('login')
 
@@ -10,15 +12,22 @@
                 </figure>
             </div>
             <div class="col-6">
-                <form action="index.html" class="form-group">
-                    <h1>Lojas R&A Nacionais e Importados</h1>
+                <form class="form-group" method="post" action="{{ route('AutenticarUsuario') }}">
+                    <h2>Lojas R&A Nacionais e Importados</h2>
+                    @if ($errors ?? ('')->all())
+                        @foreach ($errors->all() as $erro)
+                            <div class="alert alert-danger" role="alert">
+                                {{ $erro }}
+                            </div>
+                        @endforeach
+                    @endif
                     <div class="form-group">
                         <h3>Usuário</h3>
                         @csrf
-                        <input class="form-control rounded" type="email" name="email" id="email"
-                            placeholder="Informe seu usuário">
+                        <input class="form-control rounded" type="email" name="email" value="gabriel.teixeira@ra.com.br"
+                            id="email" placeholder="Informe seu usuário">
                         <h3>Senha</h3>
-                        <input class="form-control rounded" type="password" name="senha" id="senha"
+                        <input class="form-control rounded" type="password" name="password" id="password"
                             placeholder="Informe sua senha">
                         <input type="checkbox">
                         <label class="form-check-label">Lembrar meu login</label>
