@@ -23,3 +23,7 @@ Route::post('/login/AutenticarUsuario', 'Login\LoginController@AutenticarUsuario
 
 
 Route::get('/admin/vendas', 'Dashboard\ControllerVendas@index')->name('vendas');
+Route::post('/admin/vendas/cadastrarVendas', 'Dashboard\ControllerVendas@cadastrarVendas')->name('cadastrarVendas');
+// Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

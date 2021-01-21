@@ -24,7 +24,7 @@ class LoginController extends Controller
     public function AutenticarUsuario(Request $request)
     {
 
-        // var_dump($request->all());
+        //  dd($request->all());
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->route('admin');

@@ -4,6 +4,33 @@
 
 @section('login')
 
+<style>
+    .container {
+    margin-top: 90px;
+}
+
+form h1 {
+    text-align: center;
+}
+
+form h3 {
+    margin-top: 20px;
+}
+
+form .form-control {
+    margin-top: 20px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+form [type="checkbox"] {
+    margin-top: 20px;
+}
+</style>
+
     <div class="container border-bottom border-right rounded">
         <div class="row">
             <div class="col-6 coluna1">
@@ -24,7 +51,7 @@
                     <div class="form-group">
                         <h3>Usuário</h3>
                         @csrf
-                        <input class="form-control rounded" type="email" name="email" value="gabriel.teixeira@ra.com.br"
+                        <input class="form-control rounded" type="email" name="email" value="gabriel@ra.com.br"
                             id="email" placeholder="Informe seu usuário">
                         <h3>Senha</h3>
                         <input class="form-control rounded" type="password" name="password" id="password"

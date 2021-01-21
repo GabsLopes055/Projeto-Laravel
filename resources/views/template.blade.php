@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ asset('site/bootstrap.css') }}">
-
-    <link rel=" stylesheet" href="css/styleLogin.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>@yield('titulo')</title>
 </head>
